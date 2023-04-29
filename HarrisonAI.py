@@ -8,7 +8,7 @@ from streamlit_chat import message as st_message
 
 EMBEDDING_MODEL = "text-embedding-ada-002"
 GPT_MODEL = "gpt-3.5-turbo"
-openai.api_key = "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"
+
 
 @st.cache_resource(show_spinner='Reading File...')
 def read_file():
@@ -114,6 +114,8 @@ def generate_answer():
 
     message_bot = result
     st.session_state.history.append({"message": message_bot, "is_user": False})
+
+openai.api_key = input_value = st.text_input("Enter your open-ai API key", key="input_text")
 
 for i, chat in enumerate(st.session_state.history):
     st_message(**chat, key=str(i)) #unpacking
