@@ -1,0 +1,7 @@
+ast
+openai
+pandas
+tiktoken
+scipy
+streamlit
+streamlit_chat
