@@ -9,7 +9,7 @@ import requests
 
 EMBEDDING_MODEL = "text-embedding-ada-002"
 GPT_MODEL = "gpt-3.5-turbo"
-url = "http://172.20.2.40:5000/api/v1/related-strings"
+url = st.secrets["URL"]
 
 
 if "history" not in st.session_state:
